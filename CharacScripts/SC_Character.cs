@@ -97,7 +97,7 @@ public class SC_Character : MonoBehaviour
 
         
 
-        //Stop le mouvement en cas de relâchement d'input
+        //Stopping the motion in case of stopped input
         else
         {
             if (isGrounded || r2d.velocity.magnitude < 0.01f)
@@ -191,7 +191,7 @@ public class SC_Character : MonoBehaviour
         {
             if (collision.gameObject.tag != "Player" || collision.gameObject.tag != "Trigger")
             {
-                JumpStack = 1; //Mettre une valeur > 1 pour des doubles sauts  
+                JumpStack = 1; //Put value > 1 for double jumping
                 anim.SetBool("isFalling", false);                
             }
         }

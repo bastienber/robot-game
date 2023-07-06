@@ -57,7 +57,7 @@ public class SC_PlayerDamages : MonoBehaviour
         {
             if (i < HP)
             {
-                if (HP != 1) { hearts[i].GetComponent<Animator>().SetTrigger("Full"); } //Coeur remplit //{ hearts[i].sprite = fullHeart; }
+                if (HP != 1) { hearts[i].GetComponent<Animator>().SetTrigger("Full"); } //Heart is full { hearts[i].sprite = fullHeart; }
                 else { hearts[i].GetComponent<Animator>().SetTrigger("Last"); }
 
             }            

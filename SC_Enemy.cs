@@ -28,14 +28,14 @@ public class SC_Enemy : MonoBehaviour
         {
             Value *= 1500;
 
-            float DifX = gameObject.transform.position.x - Player.transform.position.x; //Différence horizontale
-            float DifY = gameObject.transform.position.y - Player.transform.position.y; //Différence verticale
+            float DifX = gameObject.transform.position.x - Player.transform.position.x; //horizontal delta
+            float DifY = gameObject.transform.position.y - Player.transform.position.y; //vertical delta
 
-            if (DifX < 0)     //Joueur à droite de l'ennemi
+            if (DifX < 0) //Player is on the right of the ennemy
             {
                 Player.GetComponent<Rigidbody2D>().AddForce(Vector3.up * (Value / 4) + Vector3.right * Value);
             }
-            else  //Joueur à gauche de l'ennemi
+            else  //Player is on the left of the ennemy
             {
                 Player.GetComponent<Rigidbody2D>().AddForce(Vector3.up * (Value / 4) + Vector3.left * Value);
             }

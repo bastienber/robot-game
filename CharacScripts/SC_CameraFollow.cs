@@ -5,20 +5,20 @@ public class SC_CameraFollow : MonoBehaviour
 {
     public Transform target;
 
-    public float smoothSpeed; //vitesse du mouvement camera
-    public Vector3 offset; //retard camera
+    public float smoothSpeed; //camera speed
+    public Vector3 offset; //camera delay
     private float startdistance;
 
     private void Start()
     {
-        startdistance = Vector3.Distance(target.position, transform.position); //distance initiale camera-perso 
+        startdistance = Vector3.Distance(target.position, transform.position);r
     }
 
 
     private void FixedUpdate()
     {
         Vector3 desiredPosition = target.position + offset;
-        float distance = Vector3.Distance(target.position, transform.position) ; //distance camera-perso
+        float distance = Vector3.Distance(target.position, transform.position) ; 
         float retard = (distance - startdistance);
         Vector3 smoothedPosition;
 
